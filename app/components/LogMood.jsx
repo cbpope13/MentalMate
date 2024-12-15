@@ -55,7 +55,7 @@ const LogMood = ({ fetchMoodHistory }) => {
             </button>
           ))}
         </div>
-        <p className="font-semibold text-sm">What's on your mind?</p>
+        <p className="font-semibold text-sm">{`What's on your mind?`}</p>
         <textarea
           id=""
           className="w-full border rounded-md py-2 px-3"

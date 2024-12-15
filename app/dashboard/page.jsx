@@ -56,6 +56,7 @@ export default function Dashboard() {
     setAiInsights(JSON.parse(data.content));
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (moodHistory.length > 0) {
       fetchAiInsights();
