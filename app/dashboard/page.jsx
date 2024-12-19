@@ -6,6 +6,7 @@ import LogMood from '../components/LogMood';
 import MoodHistory from '../components/MoodHistory';
 import Navbar from '../components/Navbar';
 import AiInsights from '../components/AiInsights';
+import { useAuth } from '@clerk/nextjs';
 
 export default function Dashboard() {
   const [chatOpen, setChatOpen] = useState(false);
@@ -146,7 +147,7 @@ export default function Dashboard() {
         }}
         className={`${
           chatOpen ? 'hidden' : 'block'
-        } fixed right-4 bottom-4 bg-blue-500 hover:bg-blue-600 p-4 text-white rounded-full`}
+        } fixed right-4 bottom-4 bg-sky-300 hover:bg-sky-400 p-4 text-white rounded-full`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +171,7 @@ export default function Dashboard() {
       >
         <div className="flex border-b p-4 items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="text-blue-500">
+            <div className="text-sky-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -217,11 +218,11 @@ export default function Dashboard() {
                 key={msg.id}
                 className="flex items-start justify-start space-x-3"
               >
-                <div className="bg-blue-100 text-blue-600 p-[6px] rounded-full">
+                <div className="bg-sky-100 text-sky-400 p-[6px] rounded-full">
                   <RiRobot2Line className="size-5" />
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <div className="bg-blue-100 px-4 py-2 rounded-lg">
+                  <div className="bg-sky-100 px-4 py-2 rounded-lg">
                     {msg.message}
                   </div>
                   <p className="text-neutral-600 text-xs">{msg.time}</p>
@@ -233,7 +234,7 @@ export default function Dashboard() {
                 className="flex items-start justify-end space-x-3"
               >
                 <div className="flex flex-col items-end space-y-1">
-                  <div className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                  <div className="bg-sky-300 text-white px-4 py-2 rounded-lg">
                     {msg.message}
                   </div>
                   <p className="text-xs text-neutral-600">{msg.time}</p>
@@ -262,14 +263,14 @@ export default function Dashboard() {
           <div className="flex items-center space-x-2">
             <input
               type="text"
-              className="border outline-blue-500 px-3 py-2 w-full rounded-lg"
+              className="border outline-sky-300 px-3 py-2 w-full rounded-lg"
               placeholder="Type you're message..."
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
             <button
               onClick={sendMessage}
-              className="bg-blue-500 rounded-lg p-2 text-white flex items-center justify-center"
+              className="bg-sky-300 rounded-lg p-2 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ const MoodHistory = ({ moodHistory }) => {
             <Line
               type="monotone"
               dataKey="i"
-              className="text-blue-500"
+              stroke="rgb(125 211 252)"
               dot={false}
               strokeWidth={2}
             />
@@ -26,7 +26,7 @@ const MoodHistory = ({ moodHistory }) => {
           <div className="w-full flex justify-end">
             <button
               onClick={() => setShowHistory(!showHistory)}
-              className="text-blue-500 text-sm"
+              className="text-sky-300 text-sm"
             >
               {showHistory ? 'Hide' : 'Show'} history
             </button>
@@ -35,7 +35,7 @@ const MoodHistory = ({ moodHistory }) => {
             moodHistory?.map((mood, ind) => (
               <div
                 key={ind}
-                className="flex items-center justify-between px-4 py-2 border-l-4 border-blue-500"
+                className="flex items-center justify-between px-4 py-2 border-l-4 border-sky-300"
               >
                 <div className="flex items-center justify-between space-x-4 w-full">
                   <div>

@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { auth } from '@/auth';
+import { auth } from '@clerk/nextjs/server';
 import db from '@/lib/db';
 
 const openai = new OpenAI({
@@ -9,8 +9,8 @@ const openai = new OpenAI({
 
 export async function POST(req) {
   await db.connect();
-  const session = await auth();
-  if (!session) {
+  const { userId } = await auth();
+  if (!userId) {
     return new Response(JSON.stringify(null), { status: 401 });
   }
 

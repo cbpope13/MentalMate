@@ -47,8 +47,8 @@ const LogMood = ({ fetchMoodHistory }) => {
               key={feeling}
               className={`${
                 mood?.feeling === feeling
-                  ? 'border-blue-500 text-white'
-                  : 'border-white hover:border-blue-300'
+                  ? 'border-sky-300 text-white'
+                  : 'border-white hover:border-sky-200'
               } p-1 border-2 aspect-square text-4xl pb-2 flex items-center justify-center rounded-full`}
             >
               {feeling}
@@ -66,7 +66,7 @@ const LogMood = ({ fetchMoodHistory }) => {
         <button
           disabled={!mood}
           onClick={logMood}
-          className="bg-blue-500 hover:bg-blue-600 text-white w-full p-3 rounded-lg disabled:bg-blue-300"
+          className="bg-sky-300 hover:bg-sky-400 text-white w-full p-3 rounded-lg disabled:bg-sky-200"
         >
           Log mood
         </button>

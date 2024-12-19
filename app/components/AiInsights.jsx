@@ -3,7 +3,7 @@ const AiInsights = ({ insights }) => {
     <div className="bg-white shadow-md rounded-4xl px-6 py-8 w-full rounded-xl">
       <div className="flex flex-col space-y-6">
         <p className="text-xl font-semibold">AI Insights</p>
-        <div className="bg-blue-100 p-6 rounded-xl flex flex-col space-y-4">
+        <div className="bg-sky-100 p-6 rounded-xl flex flex-col space-y-4">
           <div className="flex items-center space-x-2">
             <div>
               <svg
@@ -36,7 +36,7 @@ const AiInsights = ({ insights }) => {
           </div>
           {insights?.suggestedActions?.map((action, idx) => (
             <div key={idx} className="flex space-x-3">
-              <div className="bg-blue-100 w-6 text-neutral-600 h-6 aspect-square rounded-full flex items-center justify-center">
+              <div className="bg-sky-100 w-6 text-neutral-600 h-6 aspect-square rounded-full flex items-center justify-center">
                 {idx + 1}
               </div>
               <p>{action}</p>
